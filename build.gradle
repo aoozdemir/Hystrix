@@ -53,4 +53,10 @@ subprojects {
             scopes.COMPILE.plus += [configurations.provided]
         }
     }
+
+    test {
+	    outputs.upToDateWhen {false}
+        jvmArgs = ['-javaagent:/home/ec2-user/Projects/forks/Hystrix/thundra-agent-bootstrap.jar']
+    }
 }
+
